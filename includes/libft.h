@@ -28,5 +28,8 @@ int		ft_strlen(const char *str);
 char	*ft_strdup(const char *str);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t n);
+char    *ft_strcat(char *dst, const char *app);
+char	*ft_strncat(char *dst, const char *app, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t n);
 
 #endif

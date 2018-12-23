@@ -221,16 +221,62 @@ void	ft_strncpy_test()
 {
 	char	src[15] = {'0', '1', '2', '3', '\0', '5', '6', '7', '8', '9', '0', '4', '0', '0', '\0'};
 	char	dst[15];
+	char	src1[15] = {'0', '1', '2', '3', '\0', '5', '6', '7', '8', '9', '0', '4', '0', '0', '\0'};
+	char	dst1[15];
 
-	strncpy(dst, src, 2);
-	// strcpy(dst, src);
+	ft_strncpy(dst, src, 8);
+	strncpy(dst1, src1, 8);
 
 	printf("%s\n", src);
+	printf("%s\n\n", dst);
+
+	printf("%s\n", src1);
+	printf("%s\n", dst1);
+}
+
+void	ft_strcat_test()
+{
+	char	dst[30] = {'0', '1', '2', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	app[7] = {'a', 'p', 'p', 'e', 'n', 'd', '\0'};
+	char	dst1[30] = {'0', '1', '2', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	app1[7] = {'a', 'p', 'p', 'e', 'n', 'd', '\0'};
+
+	ft_strcat(dst, app);
+	strcat(dst1, app1);
+
 	printf("%s\n", dst);
+	printf("%s\n", dst1);
+}
+
+void	ft_strncat_test()
+{
+	char	dst[30] = {'0', '1', '2', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	app[7] = {'a', 'p', 'p', 'e', 'n', 'd', '\0'};
+	char	dst1[30] = {'0', '1', '2', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	app1[7] = {'a', 'p', 'p', 'e', 'n', 'd', '\0'};
+
+	ft_strncat(dst, app, 3);
+	strncat(dst1, app1, 3);
+
+	printf("%s\n", dst);
+	printf("%s\n", dst1);
+}
+
+void	ft_strlcat_test()
+{
+	char	dst[30] = {'0', '1', '2', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	app[7] = {'a', 'p', 'p', 'e', 'n', 'd', '\0'};
+	char	dst1[30] = {'0', '1', '2', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	app1[7] = {'a', 'p', 'p', 'e', 'n', 'd', '\0'};
+
+	printf("%zu\n", ft_strlcat(dst, app, 16));
+	printf("%s\n", dst);
+	printf("%lu\n", strlcat(dst1, app1, 16));
+	printf("%s\n", dst1);
 }
 
 int		main()
 {
-	ft_strncpy_test();
+	ft_strlcat_test();
 	return (0);
 }
