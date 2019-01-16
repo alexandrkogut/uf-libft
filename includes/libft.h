@@ -31,5 +31,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t n);
 char    *ft_strcat(char *dst, const char *app);
 char	*ft_strncat(char *dst, const char *app, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
+char	*ft_strchr(const char *str, int chr);
+char	*ft_strrchr(const char *str, int chr);
 
 #endif

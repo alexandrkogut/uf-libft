@@ -275,8 +275,30 @@ void	ft_strlcat_test()
 	printf("%s\n", dst1);
 }
 
+void	ft_strchr_test()
+{
+	char	str[30] = {'0', '1', '2', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	
+	char *f1 = ft_strchr(str, '1');
+	char *f2 = strchr(str, '1');
+
+	printf("%s\n", f1);
+	printf("%s\n", f2);
+}
+
+void	ft_strrchr_test()
+{
+	char	str[30] = {'0', '1', '6', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	
+	char *f1 = ft_strrchr(str, '6');
+	char *f2 = strrchr(str, '6');
+
+	printf("%s\n", f1);
+	printf("%s\n", f2);
+}
+
 int		main()
 {
-	ft_strlcat_test();
+	ft_strrchr_test();
 	return (0);
 }
