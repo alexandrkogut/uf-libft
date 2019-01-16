@@ -14,6 +14,8 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
 
 void	ft_memset_test()
 {
@@ -297,8 +299,52 @@ void	ft_strrchr_test()
 	printf("%s\n", f2);
 }
 
+void	ft_tolower_test()
+{
+	char	a1 = 'A';
+	
+	int b1 = ft_tolower(a1);
+	int b2 = tolower(a1);
+
+	printf("%c\n", (char)b1);
+	printf("%c\n", (char)b2);
+}
+
+void	ft_toupper_test()
+{
+	char	a1 = 'a';
+	
+	int b1 = ft_toupper(a1);
+	int b2 = toupper(a1);
+
+	printf("%c\n", (char)b1);
+	printf("%c\n", (char)b2);
+}
+
+void	ft_isalnum_test()
+{
+	char	a1 = 'l';
+	
+	int b1 = ft_isalnum(a1);
+	int b2 = isalnum(a1);
+
+	printf("%i\n", b1);
+	printf("%i\n", b2);
+}
+
+void	ft_atoi_test()
+{
+	char	str[30] = {' ', '+' ,'+', '0', '1', '6', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	
+	int a = atoi(str);
+	int b = ft_atoi(str);
+
+	printf("%i\n", a);
+	printf("%i\n", b);
+}
+
 int		main()
 {
-	ft_strrchr_test();
+	ft_atoi_test();
 	return (0);
 }

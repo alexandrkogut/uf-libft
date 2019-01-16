@@ -34,4 +34,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
 char	*ft_strchr(const char *str, int chr);
 char	*ft_strrchr(const char *str, int chr);
 
+int		ft_atoi(const char *str);
+
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+
 #endif
