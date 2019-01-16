@@ -343,8 +343,23 @@ void	ft_atoi_test()
 	printf("%i\n", b);
 }
 
+void	ft_strstr_test()
+{
+	char	str[30] = {' ', '+' ,'+', '0', '0', '6', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	f_str[30] = {'\0'};
+	
+	char *astr;
+	char *bstr;
+
+	astr = strstr(str, f_str);
+	bstr = strstr(str, f_str);
+
+	printf("%s\n", astr);
+	printf("%s\n", bstr);
+}
+
 int		main()
 {
-	ft_atoi_test();
+	ft_strstr_test();
 	return (0);
 }
