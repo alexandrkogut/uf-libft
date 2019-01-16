@@ -35,6 +35,7 @@ char	*ft_strchr(const char *str, int chr);
 char	*ft_strrchr(const char *str, int chr);
 
 char	*ft_strstr(const char *str, const char *f_str);
+char	*strnstr(const char *str, const char *f_str, size_t l);
 
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);

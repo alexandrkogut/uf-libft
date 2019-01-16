@@ -29,7 +29,7 @@ char	*ft_strstr(const char *str, const char *f_str)
 			b++;
 		}
 		if (*b)
-			return ((char*)str);
+			return ((char *)str);
 		str++;
 	}
 	return (NULL);

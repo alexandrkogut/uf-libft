@@ -345,14 +345,31 @@ void	ft_atoi_test()
 
 void	ft_strstr_test()
 {
-	char	str[30] = {' ', '+' ,'+', '0', '0', '6', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
-	char	f_str[30] = {'\0'};
+	char	str[30] = {' ', '1', '+' ,'+', '0', '0', '6', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	f_str[30] = {'+' ,'+', '\0'};
 	
 	char *astr;
 	char *bstr;
 
 	astr = strstr(str, f_str);
-	bstr = strstr(str, f_str);
+	bstr = ft_strstr(str, f_str);
+
+	printf("%s\n", astr);
+	printf("%s\n", bstr);
+}
+
+void	ft_strnstr_test()
+{
+	char	str[30] = {' ', '+' ,'+', '0', '0', '6', '3', '-', '5', '6', '7', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	f_str[30] = {'+' ,'+', '0', '\0'};
+	size_t	l;
+	
+	char *astr;
+	char *bstr;
+
+	l = 7;
+	// astr = strnstr(str, f_str, l);
+	// bstr = ft_strnstr(str, f_str, l);
 
 	printf("%s\n", astr);
 	printf("%s\n", bstr);
