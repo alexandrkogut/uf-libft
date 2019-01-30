@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_symbol_count.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okogut <okogut@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/30 20:10:55 by okogut            #+#    #+#             */
-/*   Updated: 2019/01/30 20:10:56 by okogut           ###   ########.fr       */
+/*   Created: 2019/01/30 20:10:08 by okogut            #+#    #+#             */
+/*   Updated: 2019/01/30 20:10:08 by okogut           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_putnbr_fd(int n, int fd)
+int		ft_symbol_count(int n)
 {
-	if (n < 0)
+	int		c;
+
+	c = 0;
+	if (n <= 0)
+		c++;
+	while (n >= 10)
 	{
-		ft_putchar_fd('-', fd);
-		n = -n;
+		n = n / 10;
+		c++;
 	}
-	if (n == -2147483648)
-	{
-		ft_putchar_fd('2', fd);
-		n %= 1000000000;
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
-	else
-		ft_putchar_fd(n + '0', fd);
+	return (c);
 }

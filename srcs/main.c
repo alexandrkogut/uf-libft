@@ -417,8 +417,45 @@ void	ft_strttrim_test()
 	printf("%s\n", b);
 }
 
+void	ft_putnbr1(int n)
+{
+	long long z;
+
+	z = (long long)n;
+	if (z < 0)
+	{
+		ft_putchar('-');
+		z = -z;
+	}
+	if (z > 9)
+	{
+		ft_putnbr(z / 10);
+		ft_putnbr(z % 10);
+	}
+	if (z < 10)
+		ft_putchar(z + '0');
+}
+
+void	ft_putnbr_test()
+{
+	int 	a = -2147483648;
+	
+	ft_putnbr(a);
+	ft_putnbr1(a);
+}
+
+void	ft_itoa_test()
+{
+	int 	a = 100;
+	char	*p;
+	
+	p = ft_itoa(a);
+
+	printf("%s\n", p);
+}
+
 int		main()
 {
-	ft_strttrim_test();
+	ft_itoa_test();
 	return (0);
 }
