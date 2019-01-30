@@ -375,16 +375,46 @@ void	ft_strnstr_test()
 	printf("%s\n", bstr);
 }
 
+char    *ft_strtrim1(char const *s)
+{
+    size_t        i;
+    size_t        j;
+    size_t        len;
+    char        *res;
+    i = 0;
+    j = 0;
+
+    if (s == NULL)
+        return (NULL);
+    
+    while (s[i] && (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
+        i++;
+    len = ft_strlen(s);
+    
+    while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
+        len--;
+    
+    res = (char *)malloc(sizeof(char)* i == ft_strlen(s) ?
+    
+    1 : (len - i) + 1 + 1);
+    if (!res)
+        return (NULL);
+    while (i < len)
+        res[j++] = s[i++];
+    res[j] = '\0';
+    return (res);
+}
+
 void	ft_strttrim_test()
 {
-	char	str[30] = {' ', '+' ,'+', '0', '0', '6', '3', '-', '5', '6', '7', ' ', '\0', '9', '0', '4', '0', '0', '\0'};
+	char	str[30] = {' ', ' ', '\t', '1', '2', ' ', '\n','\0'};
 	
 	char	*a = ft_strtrim(str);
-
-	l = 7;
+	char	*b = ft_strtrim1(str);
 
 	printf("%s\n", str);
 	printf("%s\n", a);
+	printf("%s\n", b);
 }
 
 int		main()

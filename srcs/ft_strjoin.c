@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okogut <okogut@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/31 09:30:52 by okogut            #+#    #+#             */
-/*   Updated: 2018/10/31 09:32:12 by okogut           ###   ########.fr       */
+/*   Created: 2019/01/30 19:56:19 by okogut            #+#    #+#             */
+/*   Updated: 2019/01/30 19:57:09 by okogut           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (s1 != NULL && s2 != NULL)
 	{
-		n_str = (char*)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+		n_str = (char*)malloc(sizeof(char) *
+			(ft_strlen(s1) + ft_strlen(s2) + 1));
 		if (n_str == NULL)
 			return (NULL);
 		if (ft_strlen(s1) != 0 && ft_strlen(s2) != 0)
