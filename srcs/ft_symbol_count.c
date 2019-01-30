@@ -19,7 +19,7 @@ int		ft_symbol_count(int n)
 	c = 0;
 	if (n <= 0)
 		c++;
-	while (n >= 10)
+	while (n != 0)
 	{
 		n = n / 10;
 		c++;

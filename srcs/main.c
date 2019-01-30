@@ -446,7 +446,7 @@ void	ft_putnbr_test()
 
 void	ft_itoa_test()
 {
-	int 	a = 100;
+	int 	a = -2147483648;
 	char	*p;
 	
 	p = ft_itoa(a);
