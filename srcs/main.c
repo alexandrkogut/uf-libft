@@ -375,8 +375,20 @@ void	ft_strnstr_test()
 	printf("%s\n", bstr);
 }
 
+void	ft_strttrim_test()
+{
+	char	str[30] = {' ', '+' ,'+', '0', '0', '6', '3', '-', '5', '6', '7', ' ', '\0', '9', '0', '4', '0', '0', '\0'};
+	
+	char	*a = ft_strtrim(str);
+
+	l = 7;
+
+	printf("%s\n", str);
+	printf("%s\n", a);
+}
+
 int		main()
 {
-	ft_strstr_test();
+	ft_strttrim_test();
 	return (0);
 }
