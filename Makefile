@@ -10,20 +10,27 @@
 #                                                                              #
 #******************************************************************************#
 
-NAME = libft
-FLAFS = -Wall -Werror -Wextra
-SRC = ./srcs/*.c
-HEADER = ./includes/
+NAME = libft.a
+SRC = *.c
+OBJ = $(SRC:.c=.o)
+DEL = rm -f
+FLAG = -Wall -Wextra -Werror
+TRSH = *~
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) $(SRC) -I $(HEADER) -o $(NAME)
+	gcc -c $(FLAG) $(SRC) -I .
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
-	rm -f *.o
+	$(DEL) $(OBJ)
+
+cashdel:
+	$(DEL) $(TRSH)
 
 fclean: clean
-	rm -f $(NAME)
+	$(DEL) $(NAME)
 
 re: fclean all
