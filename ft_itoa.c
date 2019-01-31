@@ -30,11 +30,12 @@ char	*ft_itoa(int n)
 		str[i++] = '-';
 		nn = -(unsigned int)n;
 	}
-	nn = (unsigned int)n;
+	else
+		nn = (unsigned int)n;
 	while (sc > i)
 	{
 		str[sc - 1] = ((nn % 10) + '0');
-		nn /= 10;
+		nn = nn / 10;
 		sc--;
 	}
 	return (str);

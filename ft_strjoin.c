@@ -18,21 +18,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 
 	i = 0;
-	if (s1 != NULL && s2 != NULL)
+	if ((s1 == NULL && s2 == NULL) || s1 == NULL || s2 == NULL)
+		return (NULL);
+	n_str = (char*)malloc(sizeof(char) *
+		(ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (n_str == NULL)
+		return (NULL);
+	if (ft_strlen(s1) != 0 || ft_strlen(s2) != 0)
 	{
-		n_str = (char*)malloc(sizeof(char) *
-			(ft_strlen(s1) + ft_strlen(s2) + 1));
-		if (n_str == NULL)
-			return (NULL);
-		if (ft_strlen(s1) != 0 && ft_strlen(s2) != 0)
-		{
-			while (*s1)
-				n_str[i++] = *(s1)++;
-			while (*s2)
-				n_str[i++] = *(s2)++;
-		}
-		n_str[i] = '\0';
-		return (n_str);
+		while (*s1)
+			n_str[i++] = *(s1)++;
+		while (*s2)
+			n_str[i++] = *(s2)++;
 	}
-	return (NULL);
+	n_str[i] = '\0';
+	return (n_str);
 }

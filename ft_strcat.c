@@ -15,7 +15,7 @@
 char	*ft_strcat(char *dst, const char *app)
 {
 	size_t	i;
-	int		j;
+	size_t	j;
 
 	i = ft_strlen(dst);
 	j = 0;

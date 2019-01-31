@@ -15,7 +15,6 @@ SRC = *.c
 OBJ = $(SRC:.c=.o)
 DEL = rm -f
 FLAG = -Wall -Wextra -Werror
-TRSH = *~
 
 all: $(NAME)
 
@@ -26,9 +25,6 @@ $(NAME):
 
 clean:
 	$(DEL) $(OBJ)
-
-cashdel:
-	$(DEL) $(TRSH)
 
 fclean: clean
 	$(DEL) $(NAME)
